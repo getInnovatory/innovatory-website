@@ -25,7 +25,7 @@ python3 -m http.server 8080
 
 Add new site → Import from Git → `getInnovatory/innovatory-website`. Build command: empty. Publish directory: `.`. Every push to `main` deploys automatically.
 
-Netlify project: `innovatory-consulting` (https://app.netlify.com/projects/innovatory-consulting). The "Powered by Netlify" badge is controlled in Project configuration → General → Powered by Netlify badge.
+Netlify project: `innovatory-consulting` (https://app.netlify.com/projects/innovatory-consulting). The "Powered by Netlify" badge is controlled in Project configuration → General → Powered by Netlify badge. Netlify only builds pushes to this private repo from the GitHub account connected to the Netlify owner's account (`getInnovatory`); pushes from any other GitHub account are blocked as "Unrecognized Git contributor" on the free plan.
 
 ## Domain (stays at Namecheap)
 
