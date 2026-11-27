@@ -95,6 +95,10 @@ p { margin: 0 0 1em; }
 .section-head { max-width: 680px; margin-bottom: 2.75rem; }
 .section-head p { color: var(--muted); font-size: 1.08rem; }
 .center { text-align: center; margin-inline: auto; }
+.section-flush { padding-top: 0; }
+.yak-more { margin-top: 2rem; }
+.yak-link { color: #f0d3a4; }
+.yak-list { color: #d9cdb8; }
 
 /* Cards */
 .grid { display: grid; gap: 1.25rem; }

@@ -2,6 +2,9 @@
 https://innovatory-consulting.netlify.app/*  https://innovatory.consulting/:splat  301!
 http://innovatory-consulting.netlify.app/*   https://innovatory.consulting/:splat  301!
 
+# Repository notes are not part of the site
+/README.md  /404.html  404!
+
 # Old WordPress URLs -> new pages
 /contact-us     /contact/   301
 /contact-us/    /contact/   301
