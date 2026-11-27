@@ -2,7 +2,7 @@
 https://innovatory-consulting.netlify.app/*  https://innovatory.consulting/:splat  301!
 http://innovatory-consulting.netlify.app/*   https://innovatory.consulting/:splat  301!
 
-# Old WordPress URLs -> new pages (works on Cloudflare Pages and Netlify)
+# Old WordPress URLs -> new pages
 /contact-us     /contact/   301
 /contact-us/    /contact/   301
 /about-us       /about/     301
