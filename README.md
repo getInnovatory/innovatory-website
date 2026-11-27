@@ -25,6 +25,8 @@ python3 -m http.server 8080
 
 Add new site → Import from Git → `getInnovatory/innovatory-website`. Build command: empty. Publish directory: `.`. Every push to `main` deploys automatically.
 
+Netlify project: `innovatory-consulting` (https://app.netlify.com/projects/innovatory-consulting). The "Powered by Netlify" badge is controlled in Project configuration → General → Powered by Netlify badge.
+
 ## Domain (stays at Namecheap)
 
 In Netlify → Domain management, add `innovatory.consulting` (Netlify adds `www` too). Then in Namecheap → Domain List → Manage → Advanced DNS:
