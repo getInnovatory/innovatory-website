@@ -10,7 +10,7 @@ about/index.html      About and mission
 contact/index.html    Contact form
 404.html              Not-found page
 assets/               CSS, JS, images
-_redirects, _headers  Old WordPress URLs and security headers (Cloudflare Pages and Netlify both read these)
+_redirects, _headers  Old WordPress URLs and security headers (read by Netlify)
 ```
 
 Each page repeats the header and footer, so a nav or footer change must be made in every `*.html` file.
@@ -21,26 +21,24 @@ Each page repeats the header and footer, so a nav or footer change must be made 
 python3 -m http.server 8080
 ```
 
-## Deploy (free)
+## Deploy (Netlify, free)
 
-**Cloudflare Pages:** Workers & Pages → Create → Pages → connect the Git repo. Framework preset: None. Build command: empty. Output directory: `/`.
-
-**Netlify:** Add new site → Import from Git. Build command: empty. Publish directory: `.`.
+Add new site → Import from Git → `getInnovatory/innovatory-website`. Build command: empty. Publish directory: `.`. Every push to `main` deploys automatically.
 
 ## Domain (stays at Namecheap)
 
-In the host's dashboard add the custom domains `innovatory.consulting` and `www.innovatory.consulting`, then in Namecheap → Domain List → Manage → Advanced DNS:
+In Netlify → Domain management, add `innovatory.consulting` (Netlify adds `www` too). Then in Namecheap → Domain List → Manage → Advanced DNS:
 
-- Cloudflare Pages without moving DNS: `CNAME www → <project>.pages.dev`. The bare domain needs DNS on Cloudflare (change nameservers to Cloudflare's, free) or a Namecheap URL redirect from `@` to `https://www.innovatory.consulting`.
-- Netlify: `A @ → 75.2.60.5` and `CNAME www → <site>.netlify.app`.
+- `A Record`, host `@`, value `75.2.60.5`
+- `CNAME Record`, host `www`, value `<site>.netlify.app`
 
 HTTPS certificates are issued automatically. Remove the old WordPress host's records first.
 
 ## Contact form
 
-The form posts to [Formspree](https://formspree.io) (free tier: 50 submissions/month), which emails each message. Create a form there, then replace `YOUR_FORM_ID` in `contact/index.html` with its ID. Until then the form shows a message pointing visitors to the email address. Spam protection: honeypot field `_gotcha`; enable reCAPTCHA in Formspree if needed.
+The form uses [Netlify Forms](https://docs.netlify.com/forms/setup/). Netlify finds the form named `contact` when it deploys the site, so nothing needs to be configured in the code. In the Netlify dashboard, under Forms → Form notifications, add an email notification to hello@innovatory.consulting. Submissions also appear under Forms. Spam protection: a hidden honeypot field (`bot-field`) plus Netlify's built-in spam filter.
 
-On Netlify you can use Netlify Forms instead: remove the `action` attribute, add `data-netlify="true" name="contact"` and a hidden `form-name` input, and change the `fetch` in `assets/js/site.js` to post URL-encoded data to `/`.
+Netlify Forms only works on Netlify. When previewing locally, submitting shows the "could not be sent" message.
 
 ## Testimonials
 

@@ -18,7 +18,7 @@ document.querySelectorAll(".nav a:not(.btn)").forEach((a) => {
 });
 
 // Contact form: submit with fetch so visitors stay on the page.
-// The form's action is the form backend endpoint (see README, "Contact form").
+// Netlify Forms accepts URL-encoded posts to "/" with the form-name field (see README, "Contact form").
 const form = document.querySelector("form[data-contact]");
 if (form) {
   const status = form.querySelector(".form-status");
@@ -29,17 +29,13 @@ if (form) {
   };
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    if (form.action.includes("YOUR_FORM_ID")) {
-      show("err", "The contact form is not connected yet. Please email hello@innovatory.consulting.");
-      return;
-    }
     const button = form.querySelector("button[type=submit]");
     button.disabled = true;
     try {
-      const res = await fetch(form.action, {
+      const res = await fetch("/", {
         method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
       });
       if (!res.ok) throw new Error(String(res.status));
       form.reset();

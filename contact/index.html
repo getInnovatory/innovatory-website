@@ -40,8 +40,9 @@
 
     <section class="section">
       <div class="container split">
-        <!-- Form backend: replace YOUR_FORM_ID with your Formspree form ID (see README). -->
-        <form class="form card" data-contact action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Netlify Forms: Netlify detects this form at deploy time and emails submissions (see README). -->
+        <form class="form card" data-contact name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
           <div class="row">
             <label>Name<input name="name" autocomplete="name" required></label>
             <label>Email<input name="email" type="email" autocomplete="email" required></label>
@@ -62,8 +63,7 @@
             </label>
           </div>
           <label>Message<textarea name="message" required></textarea></label>
-          <label class="hp" aria-hidden="true">Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label>
-          <input type="hidden" name="_subject" value="New inquiry from innovatory.consulting">
+          <label class="hp" aria-hidden="true">Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label>
           <div><button class="btn btn-primary" type="submit">Send message</button></div>
           <p class="form-status" role="status" hidden></p>
         </form>
