@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Blossom Flush icon">
+  <rect width="96" height="96" rx="22" fill="#2f5d73"/>
+  <path d="M48 76c-14 0-24-9-24-21 0-6 3-11 7-14" fill="none" stroke="#8fd3e8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M48 76c14 0 24-9 24-21 0-6-3-11-7-14" fill="none" stroke="#8fd3e8" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+  <g transform="translate(48 40)">
+    <ellipse rx="7" ry="13" fill="#f7a8c4" transform="translate(0 -9)"/>
+    <ellipse rx="7" ry="13" fill="#f7a8c4" transform="rotate(72) translate(0 -9)"/>
+    <ellipse rx="7" ry="13" fill="#f7a8c4" transform="rotate(144) translate(0 -9)"/>
+    <ellipse rx="7" ry="13" fill="#f7a8c4" transform="rotate(216) translate(0 -9)"/>
+    <ellipse rx="7" ry="13" fill="#f7a8c4" transform="rotate(288) translate(0 -9)"/>
+    <circle r="6" fill="#ffd66b"/>
+  </g>
+</svg>
