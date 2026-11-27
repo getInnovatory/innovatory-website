@@ -1,0 +1,7 @@
+# Old WordPress URLs -> new pages (works on Cloudflare Pages and Netlify)
+/contact-us     /contact/   301
+/contact-us/    /contact/   301
+/about-us       /about/     301
+/about-us/      /about/     301
+/home           /           301
+/home/          /           301

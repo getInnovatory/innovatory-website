@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="The Greek Line icon">
+  <rect width="96" height="96" rx="22" fill="#0e3b6b"/>
+  <path d="M10 66h76" stroke="#7fb8ea" stroke-width="3" stroke-linecap="round"/>
+  <rect x="12" y="38" width="22" height="22" rx="4" fill="#f4c04e"/>
+  <rect x="38" y="38" width="20" height="22" rx="4" fill="#5cc2a8"/>
+  <rect x="62" y="38" width="20" height="22" rx="4" fill="#e9707a"/>
+  <text x="23" y="55" font-family="Georgia,serif" font-size="17" font-weight="700" text-anchor="middle" fill="#0e3b6b">Λ</text>
+  <text x="48" y="55" font-family="Georgia,serif" font-size="17" font-weight="700" text-anchor="middle" fill="#0e3b6b">α</text>
+  <text x="72" y="55" font-family="Georgia,serif" font-size="17" font-weight="700" text-anchor="middle" fill="#0e3b6b">ω</text>
+  <circle cx="18" cy="66" r="4" fill="#fff"/><circle cx="30" cy="66" r="4" fill="#fff"/>
+  <circle cx="48" cy="66" r="4" fill="#fff"/><circle cx="72" cy="66" r="4" fill="#fff"/>
+</svg>

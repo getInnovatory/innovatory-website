@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="The Hebrew House icon">
+  <rect width="96" height="96" rx="22" fill="#5a2d1e"/>
+  <path d="M18 46 48 22l30 24" fill="none" stroke="#f0c78a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="25" y="44" width="46" height="32" rx="3" fill="#f6e7cf"/>
+  <rect x="31" y="50" width="10" height="10" rx="1.5" fill="#c9824f"/>
+  <rect x="55" y="50" width="10" height="10" rx="1.5" fill="#c9824f"/>
+  <text x="48" y="74" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" text-anchor="middle" fill="#5a2d1e">א</text>
+</svg>
